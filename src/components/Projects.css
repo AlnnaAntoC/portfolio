@@ -1,0 +1,113 @@
+/* Import Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+/* ================= PROJECTS SECTION ================= */
+
+.projects-section {
+  padding: 10px 4%;
+  background: #000000;
+}
+
+/* Heading */
+.projects-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 70px;
+  color: #ffffff;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+/* Card */
+.project-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000107;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image */
+.project-card img {
+  width: 150%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.12);
+}
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.2)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Icon buttons */
+.project-overlay a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #7d838661;
+  color: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-overlay a:hover {
+  transform: scale(1.2);
+  background: #ffffff;
+}
+
+/* Title */
+.project-title {
+  text-align: center;
+  margin: 18px 0;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
